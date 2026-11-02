@@ -1,4 +1,5 @@
 {
+  "trailingSlash": true,
   "redirects": [
     { "source": "/privacy", "destination": "/cat-number-match/privacy/", "permanent": true },
     { "source": "/privacy/", "destination": "/cat-number-match/privacy/", "permanent": true }
