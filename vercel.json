@@ -1,7 +1,30 @@
 {
   "trailingSlash": true,
   "redirects": [
-    { "source": "/privacy", "destination": "/cat-number-match/privacy/", "permanent": true },
-    { "source": "/privacy/", "destination": "/cat-number-match/privacy/", "permanent": true }
+    {
+      "source": "/privacy",
+      "destination": "/cat-number-match/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/cat-number-match/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "/cat-number-match/",
+      "permanent": false
+    },
+    {
+      "source": "/de/",
+      "destination": "/cat-number-match/de/",
+      "permanent": false
+    },
+    {
+      "source": "/ua/",
+      "destination": "/cat-number-match/ua/",
+      "permanent": false
+    }
   ]
 }

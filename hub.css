@@ -1,0 +1,41 @@
+/* The hub of vgames.vlasiichuk.pro. The brand itself (fonts, header, footer,
+   phone frame, sections) comes from /cat-number-match/page.css; this file
+   only adds the hero and the gallery of games. */
+
+.head-nav { display: flex; font-size: 0.8125rem; font-weight: 500; }
+.head-nav a { color: var(--muted); }
+.head-nav a:hover { color: var(--ink); text-decoration: none; }
+
+/* The logo's V and the word "games" make one word. */
+.hub-hero { padding: 1.5rem 0 1.25rem; text-align: center; }
+.hub-hero h1 { display: inline-flex; align-items: baseline; font-size: clamp(2.25rem, 6vw, 3.25rem); font-weight: 260; letter-spacing: -0.02em; line-height: 1; }
+.hub-hero h1 .v { width: 0.72em; height: 0.72em; margin-right: 0.08em; flex: none; }
+.hub-hero .lead { margin: 0.7rem auto 0; font-size: clamp(1.0625rem, 2.4vw, 1.25rem); color: var(--body); }
+
+/* Lighter than the footer's grey, so the two do not blend into one. */
+#games.section.panel { background: #f9fafc; padding-top: 1.5rem; padding-bottom: 3rem; }
+.games { margin-top: 0; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 26rem)); justify-content: start; }
+
+/* A game: the screenshot in a phone frame, cut off at the bottom like a
+   gallery picture, then its name and one line (one link to the game page),
+   then the buttons. */
+.game { display: flex; flex-direction: column; background: var(--page); border-radius: var(--radius-card); box-shadow: 0 0 0 1px var(--hairline); overflow: hidden; transition: box-shadow 0.25s var(--ease); }
+.game:hover { box-shadow: 0 0 0 1px var(--control), 0 18px 32px -20px rgb(16 19 28 / 0.35); }
+.game-link { display: block; color: inherit; }
+.game-link:hover { text-decoration: none; }
+.game-shot { height: clamp(12.5rem, 33vh, 22rem); overflow: hidden; padding: 1.25rem 2rem 0; background: #e6eaf3; transition: background 0.25s var(--ease); }
+.game:hover .game-shot { background: #f0f3f9; }
+.game-shot .shot { max-width: 15.5rem; box-shadow: none; }
+.game-info { padding: 1.1rem 1.5rem 0; }
+.game-info h3 { font-size: 1.75rem; font-weight: 400; }
+.game-info p { margin-top: 0.45rem; font-size: 1.0625rem; }
+.game-info .game-meta { font-size: 0.9375rem; color: var(--muted); }
+.game-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; padding: 1rem 1.5rem 0; }
+.game-proof { padding: 0.9rem 1.5rem 1.4rem; font-size: 0.875rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) { .game { transition: none; } }
+
+/* The footer sits at the bottom of the window even on a short page. */
+body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+main { flex: 1; display: flex; flex-direction: column; }
+#games { flex: 1; }
